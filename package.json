@@ -1,0 +1,14 @@
+{
+  "name": "js-coding-exercises",
+  "version": "1.0.0",
+  "description": "js coding exercises",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Paweł Skwirowski",
+  "license": "ISC",
+  "dependencies": {
+    "prettier": "^2.7.1"
+  }
+}
