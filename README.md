@@ -12,6 +12,7 @@ In the terminal run `node [file_name].js` to see code output in the console, e. 
   - lesson 2 **Arrays** - `oddOccurrencesInArray.js`
   - lesson 3 **Time Complexity** - `frogJmp.js`
   - lesson 3 **Time Complexity** - `permMissingElem.js`
+  - lesson 3 **Time Complexity** - `typeEquilibrium.js`
 
  ## Codility exercises
 
