@@ -75,22 +75,22 @@ function solution(N) {
   const decimalToBinaryNumber = N.toString(2);
   const digitsCount = decimalToBinaryNumber.length;
 
-  let rightZerosTrimNumber = "";
+  let rightZerosTrimmedNumber = "";
 
   for (let i = digitsCount - 1; i >= 0; i -= 1) {
     if (decimalToBinaryNumber[i] === "1") {
-      rightZerosTrimNumber = decimalToBinaryNumber.slice(0, i + 1);
+      rightZerosTrimmedNumber = decimalToBinaryNumber.slice(0, i + 1);
 
       break;
     }
   }
 
-  const trimDigitsCount = rightZerosTrimNumber.length;
+  const trimDigitsCount = rightZerosTrimmedNumber.length;
   let currentCount = 0;
   let highestCount = 0;
 
   for (let i = 0; i <= trimDigitsCount; i += 1) {
-    if (rightZerosTrimNumber[i] === "0") {
+    if (rightZerosTrimmedNumber[i] === "0") {
       currentCount += 1;
     } else {
       if (currentCount > highestCount) {

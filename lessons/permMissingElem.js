@@ -22,47 +22,49 @@ function solution(A) {
     const first = sortedA[i];
     const last = sortedA[length - i - 1];
     const firstExpectedNext = first + 1;
-    const lastExpectedNext = last - 1;
+    const lastExpectedPrev = last - 1;
     const firstNext = sortedA[i + 1];
-    const lastNext = sortedA[length - i - 1 - 1];
+    const lastPrev = sortedA[length - i - 1 - 1];
 
     if (firstNext !== firstExpectedNext) {
       return firstExpectedNext;
     }
 
-    if (lastNext !== lastExpectedNext) {
-      return lastExpectedNext;
+    if (lastPrev !== lastExpectedPrev) {
+      return lastExpectedPrev;
     }
   }
 
-  return sortedA[length - 1] + 1;
+  return sortedA[length];
 }
 
 console.log(solution([2, 3, 1, 5]));
 
-// function solution(A) {
-//   const length = A.length;
+function solutionB(A) {
+  const length = A.length;
 
-//   if (!length) {
-//     return 1;
-//   }
+  if (!length) {
+    return 1;
+  }
 
-//   const sortedA = A.sort((a, b) => a - b);
+  const sortedA = A.sort((a, b) => a - b);
 
-//   if (sortedA[0] > 1) {
-//     return 1;
-//   }
+  if (sortedA[0] > 1) {
+    return 1;
+  }
 
-//   for (let i = 0; i < length; i += 1) {
-//     const current = sortedA[i];
-//     const expectedNext = current + 1;
-//     const next = sortedA[i + 1];
+  for (let i = 0; i < length; i += 1) {
+    const current = sortedA[i];
+    const expectedNext = current + 1;
+    const next = sortedA[i + 1];
 
-//     if (next !== expectedNext) {
-//       return expectedNext;
-//     }
-//   }
-// }
+    if (next !== expectedNext) {
+      return expectedNext;
+    }
+  }
+}
+
+console.log(solutionB([2, 3, 1, 5]));
 
 /**
  * Task description

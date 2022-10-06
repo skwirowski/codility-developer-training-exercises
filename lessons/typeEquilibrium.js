@@ -33,38 +33,38 @@ function solution(A) {
 console.log(solution([3, 1, 2, 4, 3]));
 console.log(solution([1, 2, 3, 2, 4]));
 
-// function solution(A) {
-//   const length = A.length;
+function solutionB(A) {
+  const length = A.length;
 
-//   if (!length) {
-//     return 0;
-//   }
+  if (!length) {
+    return 0;
+  }
 
-//   const accumulate = (arr) => arr.reduce((prev, curr) => prev + curr, 0);
+  const accumulate = (arr) => arr.reduce((prev, curr) => prev + curr, 0);
 
-//   let min = null;
+  let min = null;
 
-//   for (let i = 1; i < length; i += 1) {
-//     const leftArr = A.slice(0, i);
-//     const rightArr = A.slice(i);
+  for (let i = 1; i < length; i += 1) {
+    const leftArr = A.slice(0, i);
+    const rightArr = A.slice(i);
 
-//     const leftSum = accumulate(leftArr);
-//     const rightSum = accumulate(rightArr);
+    const leftSum = accumulate(leftArr);
+    const rightSum = accumulate(rightArr);
 
-//     const absoluteDiff = Math.abs(leftSum - rightSum);
+    const absoluteDiff = Math.abs(leftSum - rightSum);
 
-//     if (i === 1) {
-//       min = absoluteDiff;
-//     } else if (absoluteDiff < min) {
-//       min = absoluteDiff;
-//     }
-//   }
+    if (i === 1) {
+      min = absoluteDiff;
+    } else if (absoluteDiff < min) {
+      min = absoluteDiff;
+    }
+  }
 
-//   return min;
-// }
+  return min;
+}
 
-// console.log(solution([3, 1, 2, 4, 3]));
-// console.log(solution([1, 2, 3, 2, 4]));
+console.log(solutionB([3, 1, 2, 4, 3]));
+console.log(solutionB([1, 2, 3, 2, 4]));
 
 /**
  * A non-empty array A consisting of N integers is given. Array A represents numbers on a tape.
@@ -90,7 +90,7 @@ P = 3, difference = |6 − 7| = 1
 P = 4, difference = |10 − 3| = 7
 Write a function:
 
-class Solution { public int solution(int[] A); }
+function solution(A);
 
 that, given a non-empty array A of N integers, returns the minimal difference that can be achieved.
 
